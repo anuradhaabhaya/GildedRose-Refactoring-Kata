@@ -22,8 +22,8 @@ class GildedRoseTest {
             app.updateQuality();
 
             // Assert
-            assertThat( app.items[0].name ).isEqualTo( itemName );
-            assertThat( app.items[0].sellIn ).isEqualTo( 0 );
+            assertThat( app.items.get(0).name ).isEqualTo( itemName );
+            assertThat( app.items.get(0).sellIn ).isEqualTo( 0 );
         }
 
         @Test
@@ -36,8 +36,8 @@ class GildedRoseTest {
             app.updateQuality();
 
             // Assert
-            assertThat( app.items[0].name ).isEqualTo( "Sulfuras, Hand of Ragnaros" );
-            assertThat( app.items[0].sellIn ).isEqualTo( 0 );
+            assertThat( app.items.get(0).name ).isEqualTo( "Sulfuras, Hand of Ragnaros" );
+            assertThat( app.items.get(0).sellIn ).isEqualTo( 0 );
         }
     }
 
@@ -53,8 +53,8 @@ class GildedRoseTest {
             app.updateQuality();
 
             // Assert
-            assertThat( app.items[0].name).isEqualTo( "Aged Brie" );
-            assertThat( app.items[0].quality).isEqualTo( 1 );
+            assertThat( app.items.get(0).name).isEqualTo( "Aged Brie" );
+            assertThat( app.items.get(0).quality).isEqualTo( 1 );
         }
 
         @Test
@@ -67,7 +67,7 @@ class GildedRoseTest {
             app.updateQuality();
 
             // Assert
-            assertThat( app.items[0].quality ).isEqualTo( 50 );
+            assertThat( app.items.get(0).quality ).isEqualTo( 50 );
         }
 
         @Test
@@ -80,7 +80,7 @@ class GildedRoseTest {
             app.updateQuality();
 
             // Assert
-            assertThat( app.items[0].quality ).isEqualTo( 0 );
+            assertThat( app.items.get(0).quality ).isEqualTo( 0 );
         }
 
         @Test
@@ -93,7 +93,7 @@ class GildedRoseTest {
             app.updateQuality();
 
             // Assert
-            assertThat( app.items[0].quality ).isEqualTo( 80 );
+            assertThat( app.items.get(0).quality ).isEqualTo( 80 );
         }
     }
 
@@ -109,8 +109,8 @@ class GildedRoseTest {
             app.updateQuality();
 
             // Assert
-            assertThat( app.items[0].sellIn ).isEqualTo( -1 );
-            assertThat( app.items[0].quality ).isEqualTo( 8 );
+            assertThat( app.items.get(0).sellIn ).isEqualTo( -1 );
+            assertThat( app.items.get(0).quality ).isEqualTo( 8 );
         }
 
         @Test
@@ -123,7 +123,7 @@ class GildedRoseTest {
             app.updateQuality();
 
             // Assert
-            assertThat( app.items[0].quality).isEqualTo( 11 );
+            assertThat( app.items.get(0).quality).isEqualTo( 11 );
         }
 
         @ParameterizedTest
@@ -137,7 +137,7 @@ class GildedRoseTest {
             app.updateQuality();
 
             // Assert
-            assertThat( app.items[0].quality).isEqualTo( 12 );
+            assertThat( app.items.get(0).quality).isEqualTo( 12 );
         }
 
         @ParameterizedTest
@@ -151,7 +151,7 @@ class GildedRoseTest {
             app.updateQuality();
 
             // Assert
-            assertThat( app.items[0].quality).isEqualTo( 13 );
+            assertThat( app.items.get(0).quality).isEqualTo( 13 );
         }
 
         @Test
@@ -164,7 +164,7 @@ class GildedRoseTest {
             app.updateQuality();
 
             // Assert
-            assertThat( app.items[0].quality).isEqualTo( 0 );
+            assertThat( app.items.get(0).quality).isEqualTo( 0 );
         }
     }
 

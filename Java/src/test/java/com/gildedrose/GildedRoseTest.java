@@ -95,6 +95,19 @@ class GildedRoseTest {
             // Assert
             assertThat( app.items.get(0).quality ).isEqualTo( 80 );
         }
+
+        @Test
+        void conjuredItemQualityDecreasesTwiceAsFastAsABasicItem() {
+            // Arrange
+            Item[] items = new Item[]{new Item( "Conjured", 1, 10 )};
+            GildedRose app = new GildedRose( items );
+
+            // Act
+            app.updateQuality();
+
+            // Assert
+            assertThat( app.items.get(0).quality ).isEqualTo( 8 );
+        }
     }
 
     @Nested
@@ -165,6 +178,20 @@ class GildedRoseTest {
 
             // Assert
             assertThat( app.items.get(0).quality).isEqualTo( 0 );
+        }
+
+        @Test
+        void conjuredQualityDecresesFourTimesAsFastWhenSellInIsNegative() {
+            // Arrange
+            Item[] items = new Item[]{new Item( "Conjured", 0, 10 )};
+            GildedRose app = new GildedRose( items );
+
+            // Act
+            app.updateQuality();
+
+            // Assert
+            assertThat( app.items.get(0).sellIn ).isEqualTo( -1 );
+            assertThat( app.items.get(0).quality ).isEqualTo( 6 );
         }
     }
 

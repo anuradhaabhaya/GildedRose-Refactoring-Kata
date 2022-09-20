@@ -11,6 +11,9 @@ public class ItemFactory {
         if (isItem(item, "Sulfuras, Hand of Ragnaros")) {
             return new SulfurasItem(item.name, item.sellIn, item.quality);
         }
+        if (isItem(item, "Conjured")) {
+            return new ConjuredItem(item.name, item.sellIn, item.quality);
+        }
         return new BasicItem(item.name, item.sellIn, item.quality);
     }
 

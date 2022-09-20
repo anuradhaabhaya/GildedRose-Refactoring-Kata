@@ -12,10 +12,10 @@ class GildedRose {
     }
 
     public void updateQuality() {
-        for (BasicItem item : items) {
+        items.forEach(item -> {
             item.updateQuality();
             item.decrementSellIn();
             item.updateQualityAccordingToSellIn();
-        }
+        });
     }
 }
